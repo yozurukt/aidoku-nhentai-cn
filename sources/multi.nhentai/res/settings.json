@@ -1,32 +1,32 @@
 [
 	{
 		"type": "group",
-		"title": "View Preferences",
+		"title": "视图选项",
 		"items": [
 			{
 				"type": "segment",
 				"key": "isListView",
-				"title": "Home Detail View",
+				"title": "主页面视图样式",
 				"options": ["Grid", "List"]
 			},
 			{
 				"type": "switch",
 				"key": "sortTagsAlphabetically",
-				"title": "Sort Tags Alphabetically",
-				"subtitle": "Re-open source to apply",
-				"default": true
+				"title": "按热度排序标签",
+				"subtitle": "重新进入源生效",
+				"default": false
 			}
 		]
 	},
 	{
 		"type": "group",
-		"title": "Localization",
-		"footer": "Tag & Metadata Translation may affect performance",
+		"title": "本地化",
+		"footer": "标签和元数据中文显示可能会影响性能",
 		"items": [
 			{
 				"type": "select",
 				"key": "titlePreference",
-				"title": "Preferred Title Language",
+				"title": "首选标题语言",
 				"values": ["english", "japanese"],
 				"titles": ["English", "Japanese"],
 				"default": "english"
@@ -34,7 +34,7 @@
 			{
 				"type": "select",
 				"key": "tagLanguage",
-				"title": "Tag Language",
+				"title": "标签语言",
 				"values": ["english", "chinese"],
 				"titles": ["English", "中文"],
 				"default": "english",
@@ -43,7 +43,7 @@
 			{
 				"type": "select",
 				"key": "metadataLanguage",
-				"title": "Metadata Language",
+				"title": "元数据语言",
 				"values": ["english", "chinese"],
 				"titles": ["English", "中文"],
 				"default": "english"
@@ -52,28 +52,28 @@
 	},
 	{
 		"type": "group",
-		"title": "Favorite Tags",
-		"footer": "Re-open source to apply",
+		"title": "收藏标签",
+		"footer": "重新进入源生效",
 		"items": [
 			{
 				"type": "editable-list",
 				"key": "favoriteTags",
-				"title": "Add Favorite Tag",
+				"title": "添加收藏标签",
 				"lineLimit": 1,
 				"inline": true,
-				"placeholder": "Tag to Favorite(English)",
+				"placeholder": "Tag to favorite",
 				"refreshes": ["filters"]
 			}
 		]
 	},
 	{
 		"type": "group",
-		"title": "Blocklist",
+		"title": "屏蔽标签",
 		"items": [
 			{
 				"type": "editable-list",
 				"key": "blocklist",
-				"title": "Add Blocked Tag",
+				"title": "添加屏蔽标签",
 				"lineLimit": 1,
 				"inline": true,
 				"placeholder": "Tag to block",

@@ -1,27 +1,23 @@
-# Aidoku Community Sources
+# Aidoku nhentai Source
 
-This repository hosts unofficial sources maintained by community members that are installable in [Aidoku](https://github.com/Aidoku/Aidoku).
+这是 [Aidoku Community Sources](https://github.com/Aidoku-Community/sources) 的 fork，仅包含 **nhentai** 源。并会同步上游源的更新。
 
-## Usage
+主要针对中文用户习惯进行了以下增强：
 
-On a device with Aidoku (0.7+) installed, you can open [https://aidoku-community.github.io/sources/](https://aidoku-community.github.io/sources/) and click the "Add Repository" button to add the source list directly to the app.
+- **标签双向翻译**：可以显示汉化后的标签，还支持在设置（收藏/屏蔽）里直接输入中文标签。 
+- **收藏标签**：可以在设置里添加常用的标签，方便快速筛选。
+- **排序优化**：增加了标签排序选项，支持按“热门程度”排序。
 
-Otherwise, navigate to the settings tab, and under the source lists page add `https://aidoku-community.github.io/sources/index.min.json`.
 
-If a source is not working, or you want to request a source that isn't available in this source list, feel free to [create a new issue](https://github.com/Aidoku-Community/sources/issues).
 
-## Contributing
+## 许可证
 
-Contributions are welcome! Refer to the [aidoku-rs repo](https://github.com/Aidoku/aidoku-rs/tree/next) for a guide on getting started with Aidoku source development.
+本仓库采用 Apache License 2.0 或 MIT 许可证双重授权，您可以任选其一。
 
-## License
+除非您另有明确声明，否则您有意提交以包含在此仓库中的任何贡献（如 Apache-2.0 许可证中所定义），均应按上述方式双重许可，不附加任何其他条款或条件。
 
-This repo is licensed under either of Apache License, version 2.0 or MIT license at your option.
+## 免责声明
 
-Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in this repository by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
+本项目与内容提供商和 Aidoku 应用程序没有任何关联。
 
-## Disclaimer
-
-This project does not have any affiliation with the content providers nor the Aidoku application.
-
-If you own either a content provider or content that is hosted on one of the content providers that a source is offered for and wish not to have the source be made available on this repo, please contact us or [create a new issue](https://github.com/Aidoku-Community/sources/issues/new) to let us know and we will remove it.
+本源仅供学习和技术研究用途。用户应遵守当地法律法规，对使用本源产生的任何后果自行负责。

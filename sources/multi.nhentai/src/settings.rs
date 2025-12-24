@@ -6,6 +6,10 @@ const TITLE_PREFERENCE_KEY: &str = "titlePreference";
 const LANGUAGE_KEY: &str = "language";
 const BLOCKLIST_KEY: &str = "blocklist";
 const LIST_VIEWER_KEY: &str = "isListView";
+const METADATA_LANGUAGE_KEY: &str = "metadataLanguage";
+const TAG_LANGUAGE_KEY: &str = "tagLanguage";
+const FAVORITE_TAGS_KEY: &str = "favoriteTags";
+const SORT_TAGS_ALPHABETICALLY_KEY: &str = "sortTagsAlphabetically";
 
 #[derive(Debug, Clone, Copy, PartialEq, Default)]
 pub enum TitlePreference {
@@ -39,6 +43,14 @@ pub fn get_language() -> Option<String> {
 	})
 }
 
+pub fn get_metadata_language() -> String {
+	defaults_get::<String>(METADATA_LANGUAGE_KEY).unwrap_or_else(|| "english".into())
+}
+
+pub fn get_tag_language() -> String {
+	defaults_get::<String>(TAG_LANGUAGE_KEY).unwrap_or_else(|| "english".into())
+}
+
 pub fn get_blocklist() -> Vec<String> {
 	defaults_get::<Vec<String>>(BLOCKLIST_KEY)
 		.unwrap_or_default()
@@ -48,6 +60,19 @@ pub fn get_blocklist() -> Vec<String> {
 		.collect()
 }
 
+pub fn get_favorite_tags() -> Vec<String> {
+	defaults_get::<Vec<String>>(FAVORITE_TAGS_KEY)
+		.unwrap_or_default()
+		.into_iter()
+		.map(|s| s.trim().to_lowercase())
+		.filter(|s| !s.is_empty())
+		.collect()
+}
+
 pub fn get_list_viewer() -> bool {
 	defaults_get(LIST_VIEWER_KEY).unwrap_or(false)
+}
+
+pub fn get_sort_tags_alphabetically() -> bool {
+	defaults_get(SORT_TAGS_ALPHABETICALLY_KEY).unwrap_or(false)
 }
